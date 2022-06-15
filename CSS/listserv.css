@@ -1,0 +1,116 @@
+		/* css of the most grid layout for service */
+		/* footer list grid */
+		.footlist
+		{
+			margin: 0;
+			display: grid;
+			padding: 16px;
+			box-sizing: border-box;
+			row-gap: 1px;
+			grid-template-columns: repeat(3,1fr);
+			grid-template-rows: 1fr;
+		}
+				/* inner class of footlist*/
+		.inlist > li
+		{
+			text-align:left
+		}
+						/* social media images grid */
+		.social
+		{
+			margin: 0;
+			display: grid;
+			padding: 16px;
+			box-sizing: border-box;
+			row-gap: 1px;
+			grid-template-columns: repeat(5,1fr);
+			grid-template-rows: 1fr;
+		}
+						/* grid in side bar */
+		.box2
+		{
+			margin: 0;
+			display: grid;
+			padding: 16px;
+			box-sizing: border-box;
+			grid-template-rows: repeat(5,1fr);
+			grid-template-columns: 1fr;
+			row-gap: 120px;
+		}
+		.box2 > div > img
+		{
+			height: 200px;
+			width: 90%;
+		}
+		.box2> div > h2
+		{
+			color: red;
+			margin-bottom: 0px;
+		}
+		.box2> div
+		{
+			font-family: 'Josefin Sans', sans-serif;
+		}
+						/* grid in Main */
+        .box 
+		{
+			margin: 0;
+			display: grid;
+			--num-collm: 3;
+			--gap: 16px;
+			--row-hight: 300px;
+			gap: 16px;
+			box-sizing: border-box;
+			padding: var(--gap);
+			grid-template-columns: repeat(var(--num-collm), 1fr);
+			grid-auto-rows: var(--row-hight) ;
+			height: 650px;
+        }
+		.box > div > img
+		{
+			height: 240px;
+		}				
+		/* grid conatiner of img */
+		.gpu
+		{
+			background-size: cover;
+			background-attachment: fixed;
+			display: flex;
+			flex-direction:column;
+			align-items: center;
+			justify-content: center;
+
+			transition: all .1s ease-in;
+		}
+		/* img itself*/
+		.gpu >img 
+		{
+			background-color: black;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			image-orientation: center;	
+			opacity: .85;
+		}
+		/* img hover effects*/
+		.gpu:hover
+		{
+			opacity: .7;
+			transform: scale(.98);
+		}
+		@font-face 
+		{
+  font-family: Font;
+  src: url(font/Oswald-VariableFont_wght.ttf);
+	}
+
+		.box > .gpu > h2
+		{
+			font-family: Font;
+			position:relative;
+			text-align: center;
+			top: -150px;
+			color: white;
+			width: 100%;
+			background-color: black;
+		}

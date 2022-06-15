@@ -1,0 +1,348 @@
+*
+{
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+}
+::-webkit-scrollbar-track
+{
+	border-radius: 5px;
+	box-shadow: inset 0 0 10px black;
+}
+::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: rgba(255, 166, 0, 0.658);
+}
+:root 
+	{
+	--main-radius: 5px;
+	--main-padding: 5px;
+  }
+  
+  .container {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 140px 80px 750px 500px 450px;
+	grid-template-areas:
+	  "header header header header"
+	  "nav nav nav nav"
+	  "sidebar main main main"
+	  "sidebar main main main"
+	  "sidebar footer footer footer";
+	grid-gap: 0.2rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+  }
+        /* ---------------------------------------------------- HEADER ---------------------------------------------------------- */
+  header
+  {
+	grid-area: header;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+  }
+        /* ---------------------------------------------------- HEADER OVERLAY ---------------------------------------------------------- */
+
+  .overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.65);
+	color: white;
+	padding-top: 10px;
+  }
+  .overlay >img
+  {
+	  position: relative;
+	  top: -10px;
+	  left: 7%;
+	  float: left;
+	  height: 100%;
+  }
+  .overlay h1 {
+	font-size: 50px;
+	letter-spacing: 0px;
+	margin: 0 0 5px;
+  }
+  
+  .overlay p {
+	margin: 0;
+	font-size: 30px;
+  }
+    /* ---------------------------------------------------- NAV ---------------------------------------------------------- */
+
+  nav
+  {
+	background: url("https://i.pinimg.com/originals/5d/2c/90/5d2c90957cede58200fe6798a6e38610.jpg");
+	grid-area: nav;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	display: inline-block;
+  }
+  .current
+{
+background-color: rgba(255, 166, 0, 0.658);
+height: 20px;
+}
+        /* ---------------------------------------------------- MAIN ---------------------------------------------------------- */
+
+  main 
+  {
+	background: url("https://i.pinimg.com/originals/5d/2c/90/5d2c90957cede58200fe6798a6e38610.jpg");
+	grid-area: main;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	transition: all .3s ease-in;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+  }
+        /* ---------------------------------------------------- BACkGROUND COLOR MAIN & SIDE  ---------------------------------------------------------- */
+
+  #background1
+  {
+	position: relative;
+	height: 95%;
+	width: 95%;
+	background: rgba(0, 0, 0, 0.65);
+  }
+  #background1 > h2
+  {
+	font-family: 'Montserrat', sans-serif;
+  }
+  #background2
+  {
+	position: relative;
+	height: 95%;
+	width: 95%;
+	background: rgba(0, 0, 0, 0.65);
+  }
+  #background2 > h2
+  {
+	font-family: 'Montserrat', sans-serif;
+  }
+      /* ----------------------------------------------------SIDEBAR ---------------------------------------------------------- */
+
+  .sidebar {
+	background: url("https://media1.thehungryjpeg.com/thumbs2/ori_111992_31f0534a188721c7bc30397c2dee688d7340b48f_20-seamless-black-wood-background-textures.jpg");
+	grid-area: sidebar;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+  }
+  .sidebar > div
+  {
+	position: relative;
+	height: 95%;
+	width: 95%;
+	background: rgba(0, 0, 0, 0.65);
+  }
+  
+  .sidebar > div > img
+  {
+	width: 80%;
+	height: auto;
+  }
+    /* ----------------------------------------------------footer ---------------------------------------------------------- */
+  footer {
+	background: url("https://media1.thehungryjpeg.com/thumbs2/ori_111992_31f0534a188721c7bc30397c2dee688d7340b48f_20-seamless-black-wood-background-textures.jpg");
+	grid-area: footer;
+	border-radius: var(--main-radius);
+	padding-top: var(--main-padding);
+	transition: all .3s ease-in;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+  }
+  footer > div
+  {
+	overflow-y:scroll;
+	position: relative;
+	height: 95%;
+	width: 95%;
+	background: rgba(0, 0, 0, 0.65);
+  }
+  a {
+	text-align: center;
+	display: block;
+	font-family: inherit;
+	text-decoration: none;
+	font-weight: bold;
+	margin: 1rem;
+  }
+  
+  /* ----------------------------------------------------------------------- Slick Menu CSS section---------------------------------------------------------------------- */
+  .menu
+  {
+  display: grid;
+  grid-template-columns: repeat(5,20%);
+  grid-row: 20px;
+  position: relative;
+  left:-1%;
+  list-style: none;
+  }
+.menu li
+{
+background: transparent;
+height: 100%;
+border-left: 1px black solid;
+border-right: 1px black solid;
+text-align: center;
+color: green;
+font-size: 16px;
+}
+.menu li a
+{
+	text-decoration: none;
+	font-family: sans-serif;
+	text-transform: uppercase;
+	color: rgb(0, 0, 0);
+	font-size: 15px;
+}
+li:hover
+{
+	background: skyblue;
+}
+.slicknav_menu
+{
+ display: none;
+}
+    /* ---------------------------------------------------- PHONE VIEW / SMALLER VIEW WINDOW---------------------------------------------------------- */
+  @media only screen and (max-width: 870px) {
+	.overlay h1 {
+		font-size: 30px;
+		letter-spacing: 0px;
+		margin: 0 0 5px;
+	  }
+	  
+	  .overlay p {
+		font-size: 15px;
+	  }
+	.container {
+	  overflow-x: hidden;
+	  overflow-y:scroll;
+	  grid-template-columns: 1fr;
+	  grid-template-rows: 100px 0px 500px 2000px 550px;
+	  grid-template-areas:
+		"header"
+		"nav"
+		"sidebar"
+		"main"
+		"footer";
+	}
+	.slicknav_menu
+	{
+		display: block;
+		width: 40%;
+		background: transparent;
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		z-index: 2;
+		right: 20px;
+		margin-top: 3px;
+		padding: 0px;
+		  
+	}
+	.slicknav_menu li 
+	{
+		background-color: #004d40;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.slicknav_nav a:hover
+	{
+		background: transparent;
+		color: brown;
+	}
+	.menu
+	{
+		display: none;
+	}
+	.box 
+	{
+		grid-template-columns: 100%;
+		--row-height: 100px;
+		height: auto;
+	}
+	main
+	{
+		background: url("https://media1.thehungryjpeg.com/thumbs2/ori_111992_31f0534a188721c7bc30397c2dee688d7340b48f_20-seamless-black-wood-background-textures.jpg");
+		overflow-y: scroll;
+	}
+	main > #background1
+	{
+		padding-top: 100px;
+		height: auto;
+	}
+	main > #background1 > h2
+	{
+		text-align: center;
+		position: relative;
+		top: 325px;
+	}
+	.sidebar
+	{
+		overflow-y: scroll;
+	}
+	.sidebar > #background2
+	{
+		padding-top: 850px;
+		height: fit-content;
+	}
+	footer
+	{
+		background: url("https://i.pinimg.com/originals/5d/2c/90/5d2c90957cede58200fe6798a6e38610.jpg");
+	}
+	footer > div
+	{
+		padding-left: 5px;
+		padding-right: 5px;
+		padding-bottom: 5px;
+	}
+	.line
+	{
+		border: 1px solid red;
+		width: 100%;
+		height: 50%;
+	}
+	.container > div
+	{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+  }
+  /* background img */
+body {
+	margin: 0;
+	font-family: "Roboto", sans-serif;
+	overflow-x: hidden;
+  }
+  
+  .big-image {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	background-size: cover;
+	background-position: 50% 50%;
+	background-image: url("http://tsmsouth.com/wp-content/uploads/2018/07/maintenance-banner.jpg");
+  }
+/* imported css */
